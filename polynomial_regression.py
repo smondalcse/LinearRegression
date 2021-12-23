@@ -6,9 +6,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Importing the dataset
-dataset = pd.read_csv('salesforcusting1.csv')
-X = dataset.iloc[:, 0:1].values
-y = dataset.iloc[:, 1].values
+dataset = pd.read_csv('Position_Salaries.csv')
+X = dataset.iloc[:, 1:2].values
+y = dataset.iloc[:, 2].values
 
 # Splitting the dataset into the Training set and Test set
 """from sklearn.cross_validation import train_test_split
@@ -58,7 +58,7 @@ plt.xlabel('Position level')
 plt.ylabel('Salary')
 plt.show()
 
-lin_predict = lin_reg.predict([[2021]])
+lin_predict = lin_reg.predict([[6.5]])
 print("Linear Regression Output: {0}", lin_predict)
-poly_predict = lin_reg_2.predict(poly_reg.fit_transform([[2021]]))
+poly_predict = lin_reg_2.predict(poly_reg.fit_transform([[6.5]]))
 print("Polynomial Regression Output: {0}", poly_predict)
